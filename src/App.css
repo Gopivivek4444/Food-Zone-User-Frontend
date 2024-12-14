@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbarSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 50px;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.09), 0 4px 2px rgba(0,0,0,0.09), 0 8px 4px rgba(0,0,0,0.09), 0 16px 8px rgba(0,0,0,0.09), 0 32px 16px rgba(0,0,0,0.09);
+  /* background-color: #25D366;
+  color: white; */
+ 
+}
+.itemSection{
+  /* border: 2px solid red; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* overflow-x: scroll; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 10px;
+  /* justify-content: center; */
+  margin-top: 40px;
+ 
+  
+}
+
+.itemSection .items img{
+  /* border: 2px solid blue; */
+  height: 170px;
+  /* border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+}
+
+.componentContainer{
+  padding: 0 100px;
+}
+
+@media (max-width: 769px) {
+  .navbarSection{
+      padding: 0;
+  }
+
+}
+
+
+@media(max-width: 800px){
+  .itemSection .items img{
+      height: 100px;
+    }
+    .itemSection {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+      gap:10px;
+    }
+    .componentContainer{
+      padding: 0 20px;
+    }
+}
+
+@media(max-width:400px){
+  .itemSection .items img{
+    height: 70px;
+  }
+  .itemSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(70px,1fr));
+    gap:10px;
+  }
+  .componentContainer{
+    padding: 0;
+  }
+}
+
+/* chains.jsx */
+
+.firmSection{
+  /* border: 2px solid red; */
+  margin-top: 40px;
+  display: flex;
+  overflow-x: hidden;
+}
+.vendorInfo{
+  display: flex;
+}
+
+.firmInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  font-weight: 400;
+}
+
+.imageContainer img{
+  /* border: 1px solid red; */
+  width: 280px;
+  height: 180px;
+  border-radius: 10px;
+
+  
+}
+
+.buttonSection{
+  display: flex;
+  justify-content: flex-end;
+  /* border: 2px solid red; */
+
+}
+
+/* FirmSection.jsx */
+
+/* .firmDataSection{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+  border: 3px solid red;
+}
+.vendorData{
+  border: 3px solid black;
+}
+.firmData{
+  border: 3px solid blue;
+  
+}
+  */
+.imageBlock img{
+  
+  width: 226px;
+  height: 170px;
+  border-radius: 10px;
+  object-fit: cover;
+  
+} 
+
+.imageBlock{
+  position: relative;
+  /* border: 2px solid blue; */
+}
+.offerDiv{
+  /* border: 1px solid red; */
+  width: 100%;
+  position: absolute;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  bottom: 6px;
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 8px;
+  padding-top: 16px;
+  background: transparent;
+  background: linear-gradient(to bottom, rgba(50,0,0,0.08),black);
+  color: white;
+  text-transform: uppercase;
+}
+.firmName{
+  font-size: 1.1rem;
+  text-align: center;
+}
+.firmDetails{
+  color: gray;
+  font-weight: 300;
+  text-align: center;
+}
+.firmDataSection{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 225px);
+  gap: 30px;
+  /* justify-content: center; */
+}
+
