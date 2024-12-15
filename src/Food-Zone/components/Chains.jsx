@@ -43,7 +43,7 @@ const Chains = () => {
   }
 
   return (
-    <>
+    <div className='chainContainer'>
     <div className="buttonSection">
       <button onClick={() =>{handleScroll("left")}}>left</button>  
       <button onClick={() =>{handleScroll("right")}}>right</button>
@@ -74,7 +74,7 @@ const Chains = () => {
         )
       })}
     </div>
-    </>
+    </div>
   );
 };
 

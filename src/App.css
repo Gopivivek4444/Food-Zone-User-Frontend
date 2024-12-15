@@ -83,6 +83,9 @@ body{
 
 /* chains.jsx */
 
+.chainContainer h3{
+  text-align: center;
+}
 .firmSection{
   /* border: 2px solid red; */
   margin-top: 40px;
@@ -98,7 +101,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 10px;
+  margin: 0 30px;
   font-weight: 400;
 }
 
@@ -123,6 +126,9 @@ body{
 .firmContainer{
   margin-top: 100px;
   /* border: 2px solid red; */
+}
+.firmContainer h3{
+  text-align: center;
 }
 .imageBlock img{
   
@@ -161,11 +167,16 @@ body{
   color: gray;
   font-weight: 300;
   text-align: center;
+  
 }
 .firmDataSection{
   display: grid;
   grid-template-columns: repeat(auto-fit, 225px);
-  gap: 30px;
-  /* justify-content: center; */
+  gap: 60px;
+  justify-content: center;
+}
+
+.firmData{
+  text-decoration: none;
 }
 
