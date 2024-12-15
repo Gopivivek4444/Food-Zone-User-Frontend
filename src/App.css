@@ -29,6 +29,7 @@ body{
   gap: 10px;
   /* justify-content: center; */
   margin-top: 40px;
+
  
   
 }
@@ -119,20 +120,10 @@ body{
 
 /* FirmSection.jsx */
 
-/* .firmDataSection{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap:10px;
-  border: 3px solid red;
+.firmContainer{
+  margin-top: 100px;
+  /* border: 2px solid red; */
 }
-.vendorData{
-  border: 3px solid black;
-}
-.firmData{
-  border: 3px solid blue;
-  
-}
-  */
 .imageBlock img{
   
   width: 226px;
