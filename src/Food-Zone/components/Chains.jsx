@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '../api';
+import { ThreeDots } from 'react-loader-spinner'
 
 const Chains = () => {
   const [vendorRecords, setVendorRecords] = useState({vendors: []});
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
+  const [loader, setLoader] = useState(true);
 
   const vendorRecordHandler = async () => {
     try {
       const response = await axios.get(`${API_URL}/vendor/allVendors`);
       setVendorRecords(response.data);
       console.log('this is api data', response.data.vendors);
+      setLoader(false)
     } catch (error) {
       alert("Failed to fetch data")
       console.error("Failed to fetch data",error);
+      setLoader(true)
     }
   };
 
@@ -44,9 +48,28 @@ const Chains = () => {
 
   return (
     <div className='chainContainer'>
+    {loader?
+    <div className="loader">
+      <ThreeDots
+          visible={true}
+          height="80"
+          width="80"
+          color="orangered"
+          radius="9"
+          ariaLabel="three-dots-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+      />
+    </div>
+    :
+    <>
     <div className="buttonSection">
-      <button onClick={() =>{handleScroll("left")}}>left</button>  
-      <button onClick={() =>{handleScroll("right")}}>right</button>
+      <button onClick={() =>{handleScroll("left")}}>
+      <span class="material-symbols-outlined">arrow_circle_left</span>
+      </button>  
+      <button onClick={() =>{handleScroll("right")}}>
+      <span class="material-symbols-outlined">arrow_circle_right</span>
+      </button>
     </div>
     
      <h3>Top Restaurants In India</h3>
@@ -74,6 +97,8 @@ const Chains = () => {
         )
       })}
     </div>
+    </>
+    }
     </div>
   );
 };

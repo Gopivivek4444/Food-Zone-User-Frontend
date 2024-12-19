@@ -16,8 +16,23 @@ body{
   box-shadow: 0 2px 1px rgba(0,0,0,0.09), 0 4px 2px rgba(0,0,0,0.09), 0 8px 4px rgba(0,0,0,0.09), 0 16px 8px rgba(0,0,0,0.09), 0 32px 16px rgba(0,0,0,0.09);
   /* background-color: #25D366;
   color: white; */
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1;
  
 }
+
+.HomeLink{
+  color: orangered;
+  text-decoration: none;
+}
+
+.userAuth{
+  color: orangered;
+}
+
 .itemSection{
   /* border: 2px solid red; */
   /* display: flex;
@@ -83,6 +98,11 @@ body{
 
 /* chains.jsx */
 
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .chainContainer h3{
   text-align: center;
 }
@@ -117,19 +137,80 @@ body{
 .buttonSection{
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  top: 50px;
+  gap: 10px;
   /* border: 2px solid red; */
 
 }
+
+.buttonSection button{
+  border: none;
+  background: none;
+}
+
+.material-symbols-outlined {
+  font-size: 28px; /* Adjust size */
+  vertical-align: middle;
+ 
+}
+
 
 /* FirmSection.jsx */
 
 .firmContainer{
-  margin-top: 100px;
+  margin: 100px 0;
   /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  
 }
 .firmContainer h3{
   text-align: center;
 }
+
+.filterButton{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 2px solid red; */
+  width: 100%;
+  max-width: 50%;
+}
+
+.btn {
+  border-radius: 5px;
+  background-color: orangered;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: darkorange;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  background-color: red;
+  transform: scale(0.95);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 69, 0, 0.9);
+}
+
+
+
 .imageBlock img{
   
   width: 226px;
@@ -170,6 +251,8 @@ body{
   
 }
 .firmDataSection{
+  width: 100%;
+  /* border: 2px solid black; */
   display: grid;
   grid-template-columns: repeat(auto-fit, 225px);
   gap: 60px;
@@ -180,3 +263,57 @@ body{
   text-decoration: none;
 }
 
+#Link{
+  color: black;
+  text-decoration: none;
+}
+
+/* productMenu.jsx */
+
+#firmName{
+  text-align: center;
+}
+.productSection{
+  margin-top: 50px;
+  padding: 10px 150px;
+}
+
+.productDetails{
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+
+}
+
+.productDetails img{
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+.productImage{
+  position: relative;
+  
+}
+
+.productButton{
+  text-align: center;
+  color: green;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 100%;
+  max-width: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  
+}
+
+.aboutProduct{
+  display: flex;
+  flex-direction: column;
+}
