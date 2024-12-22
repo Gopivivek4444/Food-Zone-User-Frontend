@@ -30,7 +30,7 @@ const Chains = () => {
 
   const handleScroll  = (direction) =>{
         const gallery = document.getElementById('firmSection');
-        const scrollAmount = 1000;
+        const scrollAmount = 350;
 
         if(direction === "left")
         {
