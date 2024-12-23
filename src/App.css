@@ -35,18 +35,11 @@ body{
 
 .itemSection{
   /* border: 2px solid red; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* overflow-x: scroll; */
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
   gap: 10px;
-  /* justify-content: center; */
+  justify-content: center;
   margin-top: 40px;
-
- 
-  
 }
 
 .itemSection .items img{
@@ -114,6 +107,7 @@ body{
 }
 .vendorInfo{
   display: flex;
+  flex-wrap: nowrap;
 }
 
 .firmInfo{
@@ -159,7 +153,7 @@ body{
 /* FirmSection.jsx */
 
 .firmContainer{
-  margin: 100px 0;
+  margin: 70px 0;
   /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
@@ -290,6 +284,10 @@ body{
 
 }
 
+.aboutProduct #productName{
+  color: orangered;
+}
+
 .productDetails img{
   width: 150px;
   height: 100px;
@@ -354,4 +352,36 @@ body{
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
+  .productSection{
+    margin-top: 50px;
+    padding: 10px 0;
+  }
+  .firmSection {
+    margin-top: 15px;
+    padding: 15px 0;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  
+  .firmInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    
+  }
+  .imageContainer img {
+    width: 200px;
+    height: 130px;
+  }
+  .firmContainer{
+    margin: 20px 0;
+  }
+ 
+  
+  
 }

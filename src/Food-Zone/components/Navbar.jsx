@@ -9,9 +9,9 @@ const Navbar = () => {
             <h2>FOODZONE</h2>
           </Link>
         </div>
-        <div className="searchBar">
+        {/* <div className="searchBar">
             <input type='text' placeholder='Search...'/>
-        </div>
+        </div> */}
         <div className="userAuth">
             SignIn / SignUp
         </div>

@@ -29,9 +29,10 @@ const ProductMenu = () => {
         {products.map((product) =>(
             <div key={product._id} className='productDetails'>
                 <div className="aboutProduct">
-                <div>{product.productName}</div>
-                <div>{product.price}</div>
+                <div id='productName'>{product.productName}</div>
                 <div>{product.description}</div>
+                <div>{product.price}</div>
+                
                 </div>
                 
                 <div className="productImage">
