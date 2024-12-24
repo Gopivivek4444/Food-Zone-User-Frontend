@@ -29,7 +29,7 @@ const Login = ({setShowLogin}) => {
         // showWelcomeHandler();
       }
       else{
-        alert("Login Failed Invalid Username or Password",data.message);
+        alert(data.message);
         console.log(data.message);
       }
     } catch (error) {
