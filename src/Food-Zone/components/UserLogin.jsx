@@ -30,10 +30,12 @@ const Login = ({setShowLogin}) => {
       }
       else{
         alert("Login Failed Invalid Username or Password",data.message);
+        console.log(data.message);
       }
     } catch (error) {
-      // console.error(error);
+      console.error(error);
       alert("Login Failed due to server error");
+
     }
   }
 

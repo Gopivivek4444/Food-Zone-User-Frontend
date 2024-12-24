@@ -26,6 +26,10 @@ const UserRegister = ({showLoginHandler}) => {
         alert("User Registered Successfully")
         showLoginHandler();
       }
+      else{
+        alert(data.message);
+        console.log(data.message);
+      }
     } catch (error) {
       console.error("Registration Failed")
       alert("Registration Failed")
