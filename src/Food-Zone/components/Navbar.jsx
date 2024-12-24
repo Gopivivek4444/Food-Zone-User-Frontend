@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({showLoginHandler, showRegisterHandler, showLogout, logoutHandler}) => {
   return (
     <nav className='navbarSection'>
         <div className="companyTitle">
@@ -13,10 +13,17 @@ const Navbar = () => {
             <input type='text' placeholder='Search...'/>
         </div> */}
         <div className="userAuth">
-            SignIn / SignUp
+          {showLogout?<span onClick={logoutHandler}>Logout</span>:
+          <>
+          <span onClick={showLoginHandler}>Login /</span>
+          <span onClick={showRegisterHandler}>Register</span>
+          </>
+          }
+        
         </div>
     </nav>
   );
 };
 
 export default Navbar;
+

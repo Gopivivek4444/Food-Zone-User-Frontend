@@ -23,7 +23,7 @@ const ProductMenu = () => {
     },[])
   return (
     <>
-    <Navbar/>
+    <Navbar />
     <div className='productSection'>
         <h3 id='firmName'>{firmName}</h3>
         {products.map((product) =>(

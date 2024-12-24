@@ -36,3 +36,26 @@ export const itemData = [{
 },
 
 ]
+
+export const quotations = [
+    {
+      text: "Log in and Let the Feast Begin!",
+      backgroundImage: '/assets/items/bg1.jpg',
+    },
+    {
+      text: "Your Next Meal is Just a Login Away!",
+      backgroundImage: '/assets/items/bg2.jpg',
+    },
+    {
+      text: "Welcome Back! Let's Get You Something Delicious.",
+      backgroundImage: '/assets/items/bg3.jpg',
+    },
+    {
+      text: "Hungry Again? We've Got You Covered!",
+      backgroundImage: '/assets/items/bg4.jpg',
+    },
+    {
+      text: "Unlock the Door to Tasty Delights!",
+      backgroundImage: '/assets/items/bg5.jpg',
+    },
+  ];

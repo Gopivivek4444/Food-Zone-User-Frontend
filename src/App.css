@@ -31,6 +31,8 @@ body{
 
 .userAuth{
   color: orangered;
+  font-size: 1.18rem;
+  font-weight: 600;
 }
 
 .itemSection{
@@ -319,6 +321,135 @@ body{
   display: flex;
   flex-direction: column;
 }
+
+/* UserLogin.jsx */
+.login-section {
+  width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+  text-align: center;
+ 
+}
+
+.login-section h3 {
+  font-size: 28px;
+  margin: 24px 0;
+  color: orangered;
+}
+
+.formSection {
+  margin-top: 20px;
+  /* border: 2px solid red; */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: black;
+}
+
+.form-input {
+  width: 93.5%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid gray;
+  /* border-radius: 8px; */
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-bottom: 2px solid orangered;
+  outline: none;
+  /* box-shadow: 0 0 8px rgba(74, 144, 226, 0.3); */
+}
+
+.btn-submit {
+  margin-top: 30px;
+}
+
+.btn-submit button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  background-color: orangered;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit button:hover {
+  background-color: red;
+}
+
+/* WelcomePage.jsx */
+
+.welcome-page {
+  margin-top: 40px;
+  padding: 0 40px;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.quoteContainer{
+  padding: 10px;
+  animation: scroll 30s linear infinite;
+  position: relative;
+
+}
+
+.quoteContainer  img{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.quoteContainer #quote h1{
+  color: white;
+  position: absolute;
+  top: 250px;
+  left: 130px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.overlay {
+  color: #fff;
+  text-align: center;
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  gap: 30px;
+}
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(210%);
+  }
+  100% {
+    transform: translateX(-210%);
+  }
+}
+
 
 @media(max-width:576px){
   .chainContainer h3{
