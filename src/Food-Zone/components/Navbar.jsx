@@ -9,9 +9,17 @@ const Navbar = ({showLoginHandler, showRegisterHandler, showLogout, logoutHandle
             <h2>FOODZONE</h2>
           </Link>
         </div>
-        {/* <div className="searchBar">
-            <input type='text' placeholder='Search...'/>
-        </div> */}
+        <div className="moduleSection">
+        <div className="cart">
+          <Link to={'/cart'} className='cartLink'>
+          <h3>
+          Cart
+            <span class="material-symbols-outlined">
+                shopping_cart
+            </span>
+          </h3>
+          </Link>
+        </div>
         <div className="userAuth">
           {showLogout?<span onClick={logoutHandler}>Logout</span>:
           <>
@@ -19,7 +27,7 @@ const Navbar = ({showLoginHandler, showRegisterHandler, showLogout, logoutHandle
           <span onClick={showRegisterHandler}>Register</span>
           </>
           }
-        
+        </div>
         </div>
     </nav>
   );

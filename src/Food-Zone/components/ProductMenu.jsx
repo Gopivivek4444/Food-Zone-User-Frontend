@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { API_URL } from '../api';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Navbar from './Navbar.jsx'
 
 const ProductMenu = () => {
@@ -20,7 +20,14 @@ const ProductMenu = () => {
 
     useEffect(() =>{
         productHandler();
-    },[])
+    },[]);
+
+    const addToCart = (product) => {
+        const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        const updatedCart = [...savedCart, product];
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    };
+
   return (
     <>
     <Navbar />
@@ -37,7 +44,9 @@ const ProductMenu = () => {
                 
                 <div className="productImage">
                     <img src={`${API_URL}/uploads/${product.image}`} alt={product.productName} />
-                    <div className="productButton">ADD</div>
+                    <Link to={`/cart`}>
+                    <div className="productButton" onClick={() => addToCart(product)}>ADD</div>
+                    </Link>
                 </div>
             </div>
         ))}
