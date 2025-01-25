@@ -41,7 +41,7 @@ const Login = ({setShowLogin}) => {
 
   return (
     <div className="login-section">
-      <h3>Vendor Login</h3>
+      <h3>Sign In</h3>
       <div className="formSection">
       <form onSubmit={loginHandler}>
         <div className="form-group">

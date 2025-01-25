@@ -38,7 +38,7 @@ const UserRegister = ({showLoginHandler}) => {
     
   return (
     <div className="login-section">
-    <h3>Vendor Register</h3>
+    <h3>Sign Up</h3>
     <form onSubmit={handleOnSubmit}>
       <div className="form-group">
         <label>Username</label>
