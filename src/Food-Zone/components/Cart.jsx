@@ -19,7 +19,7 @@ const Cart = () => {
         <>
             <Navbar />
             <div className='cartSection'>
-                <h3>Your Cart</h3>
+                <h2>Cart Items</h2>
                 {cartItems.length === 0 ? (
                     <p>Cart is empty</p>
                 ) : (
@@ -30,7 +30,9 @@ const Cart = () => {
                                 <div>{item.productName}</div>
                                 <div>{item.price}</div>
                             </div>
-                            <button id='removeBtn' onClick={() => handleRemove(item._id)}>Remove</button>
+                            <button id='removeBtn' onClick={() => handleRemove(item._id)}><span class="material-symbols-outlined">
+                                remove_shopping_cart
+                                </span></button>
                         </div>
                     ))
                 )}

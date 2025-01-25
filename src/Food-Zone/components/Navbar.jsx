@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({showLoginHandler, showRegisterHandler, showLogout, logoutHandler}) => {
+
+  const token = localStorage.getItem('token')
+
   return (
     <nav className='navbarSection'>
         <div className="companyTitle">
@@ -11,6 +14,7 @@ const Navbar = ({showLoginHandler, showRegisterHandler, showLogout, logoutHandle
         </div>
         <div className="moduleSection">
         <div className="cart">
+          { token &&
           <Link to={'/cart'} className='cartLink'>
           <h3>
           Cart
@@ -19,6 +23,7 @@ const Navbar = ({showLoginHandler, showRegisterHandler, showLogout, logoutHandle
             </span>
           </h3>
           </Link>
+          }
         </div>
         <div className="userAuth">
           {showLogout?<span onClick={logoutHandler}>Logout</span>:
